@@ -1,0 +1,121 @@
+
+:root {
+    --main-color: #ff6436;
+    --sidebar-color: #d5ecfa;
+    --background-black:#2e2d2d;
+}
+[data-theme="dark"] {
+    --theme-color: #0f3057;
+    --primary-color: #e7e7de;
+}
+
+
+body{
+    overflow: hidden;
+    background: var(--background-black)!important;
+}
+.container{
+    gap:50px;
+    width: 1200px;
+    display: flex;
+    justify-content:center;
+    margin: auto;
+    background-color: #176c63;
+    padding: 0!important;
+    border-radius: 30px;
+}
+*{
+    color: var(--sidebar-color);
+}
+.sidebar{
+    width: 30%;
+    background-color: var(--main-color);
+    border-radius: 30px;
+}
+.content-side{
+    padding: 30px;
+}
+.sidebar p{
+    margin: 10px;
+}
+.sidebar p svg{
+    margin: 10px;
+}
+
+.content{
+    width: 70%;
+}
+
+
+.block-head{
+    display: flex;
+    justify-content:center;
+    margin:auto;
+    height: 150px;
+}
+.light-box{
+    position: absolute;
+    animation: 4s infinite alternate example ease-in-out;
+
+}
+    @keyframes example {
+    from { transform: rotate(60deg);}
+    to { transform: rotate(-60deg);}
+}
+.lamp{
+    top:-10px;
+    position: absolute;
+}
+.lamp-svg{
+    transform:rotate(180deg);
+}
+.wire{
+    height: 150px;
+    width: 4px;
+    background:#00000063;
+}
+.lightbulb{
+    cursor: pointer;
+    position: absolute;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background:rgb(255,213,0);
+    bottom: -3rem;
+    left: -3rem;
+    box-shadow: 0px 0px 40px 18px rgba(255,213,0,1);
+}
+
+
+
+.shadow-dark{
+    background-color:black;
+    opacity: 0.6;
+    height: 100vw;
+    width: 200vw;
+    position: absolute;
+    left:-100vw;
+    top:-97vw;
+    box-shadow:0px 0px 1px 100vw #ffcf005c;
+}
+.right-shadow{
+    transform: rotate(-195deg);
+}
+.left-shadow{
+    transform: rotate(195deg);
+}
+
+body.blue .lightbulb {
+    background-color: rgb(10, 218, 251);
+    box-shadow: 0px 0px 40px 18px rgba(10,218,251,1);
+}
+body.blue .shadow-dark{
+    box-shadow:0px 0px 1px 100vw rgba(10,218,251,0.4);
+}
+body.white .shadow-dark{
+    display: none;
+}
+body.white .lightbulb{
+    box-shadow:none;
+    background: none;
+}

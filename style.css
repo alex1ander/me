@@ -28,7 +28,6 @@ body{
     color: var(--sidebar-color);
 }
 .sidebar{
-    width: 30%;
     background-color: var(--main-color);
     border-radius: 30px;
 }
@@ -42,9 +41,7 @@ body{
     margin: 10px;
 }
 
-.content{
-    width: 70%;
-}
+
 
 
 .block-head{
@@ -83,7 +80,7 @@ body{
     background:rgb(255,213,0);
     bottom: -3rem;
     left: -3rem;
-    box-shadow: 0px 0px 40px 18px rgba(255,213,0,1);
+    box-shadow: 0px 0px 40px 18px rgba(255,213,0,0.6);
 }
 
 
@@ -118,4 +115,31 @@ body.white .shadow-dark{
 body.white .lightbulb{
     box-shadow:none;
     background: none;
+}
+
+@media screen and (max-width: 769px){
+    body{
+        overflow: auto;
+    }
+    .container{
+        display: block;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+    }
+    .shadow-dark{
+        display: none;
+    }
+    .wire{
+        box-shadow: 0px 0px 1px 500vw #ffcf005c;
+    }
+    .blue .wire{
+        box-shadow: 0px 0px 1px 500vw rgba(10, 218, 251, 0.4);
+    }
+    .white .wire{
+        box-shadow: none;
+    }
 }
